@@ -3,25 +3,30 @@ body {
     border-radius: 30px;
     margin: 0 10px;
 }
-h1{
+
+h1 {
     font-size: 32px;
     font-family: helvetica, arial, sans-serif;
     text-align: center;
 }
-h2{
+
+h2 {
     font-size: 26px;
     text-align: center;
 }
-h3{
+
+h3 {
     font-size: 20px;
     font-family: helvetica, arial, sans-serif;
     color: #feebd1;
 }
-p{
+
+p {
     font-size: 16px;
     font-family: helvetica, arial, sans-serif;
     color: #7c9bc3;
 }
+
 img {
     max-width: 250px;
     display: block;
@@ -33,7 +38,7 @@ img {
 }
 
 figcaption {
-    font-size: 0.8em; 
+    font-size: 0.8em;
     font-style: italic;
 }
 
@@ -62,18 +67,39 @@ footer {
     width: 100%;
 }
 
-.navigation:hover{
+.navigation:hover {
     background-color: #000a20;
     border-radius: 3px;
     padding: 5px;
 }
-.navigation > a:hover{
+
+.navigation>a:hover {
     color: #7c9bc3;
     text-decoration: underline;
 }
-.pageLinks{
-    background-color:#7c9bc3;
+
+.pageLinks {
+    background-color: #7c9bc3;
     height: 100%;
     padding: 5px 0 5px 0;
     border-radius: 5px;
+}
+
+.product-container {
+    border: 2px solid red;
+
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-rows: 500px;
+}
+
+.product-card {
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
