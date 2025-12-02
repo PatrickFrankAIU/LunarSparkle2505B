@@ -4,10 +4,15 @@
     --font-open-sans: "Open Sans";
     --font-karla: "Karla";
     --lavender: #DDDBF1;
+    --dark-lavender: #c7c3f7;
     --dusk-blue: #3C4F76;
     --charcoal-blue: #383F51;
     --cinnabar: #F24333;
+    --gradient: linear-gradient(to bottom, #F4F6F4, #f0f3f0);
+    --white-smoke: #F4F6F4;
+    --alabaster-gray: #f0f3f0;
 }
+
 
 * {
     padding: 0;
@@ -15,16 +20,32 @@
     box-sizing: border-box;
 }
 
+/* html,
+body {
+    height: 100%;
+    min-height: 100%;
+} */
+
 body {
     font-family: sans-serif;
     font-family: var(--font-karla);
+    background-repeat: no-repeat;
+    background: var(--gradient);
     border-radius: 30px;
     margin: 0 auto;
-    /* display: flex;
-    flex-direction: column; */
     height: 100vh;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+main {
+    flex: 1;
+}
+
+/* for later
+ https://grabient.com/HQFgDAnANMDMYA4YCYwhgVgsmIMZlhAEYYEwdgEiYB2fGCMWKY4ZsKWYYimY2qWAA2WtDbEawDLRBA?angle=0
+ 
+ background: linear-gradient(0deg, #2e3c45 0.000%, #2d454e 3.030%, #2f5057 6.061%, #355d61 9.091%, #3c6b6b 12.121%, #477974 15.152%, #54877d 18.182%, #629585 21.212%, #73a28c 24.242%, #84ad91 27.273%, #96b796 30.303%, #a7bf99 33.333%, #b8c59a 36.364%, #c8c89a 39.394%, #d7c999 42.424%, #e3c796 45.455%, #edc391 48.485%, #f4bc8b 51.515%, #f9b484 54.545%, #faa97c 57.576%, #f99d74 60.606%, #f4906a 63.636%, #ed8261 66.667%, #e37457 69.697%, #d6664e 72.727%, #c85845 75.758%, #b74c3d 78.788%, #a64135 81.818%, #95392f 84.848%, #83322a 87.879%, #722d27 90.909%, #622b25 93.939%, #532c25 96.970%, #462f26 100.000%); */
 
 
 h1 {
@@ -69,9 +90,9 @@ figcaption {
 }
 
 /* figure {
-    display: flex;
-    justify-content: space-between;
-} */
+ display: flex;
+ justify-content: space-between;
+ } */
 
 header {
     background-color: var(--lavender);
@@ -95,24 +116,44 @@ footer {
     background-color: var(--lavender);
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
+.main-index {
+    text-align: center;
+    padding: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--charcoal-blue);
+}
+
+
+a:visited {
+    text-decoration: none;
+    color: var(--charcoal-blue);
+}
+
+.navigation {
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 5px;
+}
+
 .navigation:hover {
-    background-color: var(--charcoal-blue);
+    background-color: var(--dark-lavender);
     border-radius: 3px;
     padding: 5px;
 }
 
 .navigation>a:hover {
-    color: #7c9bc3;
+    color: var(--charcoal-blue);
     text-decoration: underline;
 }
 
 .pageLinks {
-    background-color: #7c9bc3;
+    background-color: var(--lavender);
     height: 100%;
     padding: 5px 0 5px 0;
     border-radius: 5px;
@@ -143,4 +184,37 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.product-table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 10px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.6em;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.social-media {
+    text-align: center;
+    padding-top: 2rem;
 }
