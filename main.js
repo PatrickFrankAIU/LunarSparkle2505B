@@ -5,9 +5,13 @@ const copyYear = today.getFullYear()
 const footerText = document.getElementById('footer-year')
 footerText.innerHTML = copyYear
 
-function main() {
+document.addEventListener('DOMContentLoaded', () => {
     setTimeout(showUp, 5000);
-}
+})
+
+// function main() {
+//     setTimeout(showUp, 5000);
+// }
 
 function showUp() {
     sale.style.display = 'block'
