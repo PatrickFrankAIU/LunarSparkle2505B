@@ -119,6 +119,28 @@ footer {
     width: 100%;
 }
 
+#img-overlay {
+    max-width: fit-content;
+    height: 600px;
+    width: auto;
+}
+
+#close-overlay {
+    color: white;
+    cursor: pointer;
+    margin: 3rem 50%;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
 .main-index {
     text-align: center;
     padding: 2rem;
