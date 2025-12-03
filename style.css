@@ -146,6 +146,9 @@ a {
     color: var(--charcoal-blue);
 }
 
+.team {
+    padding-top: 2rem;
+}
 
 a:visited {
     text-decoration: none;
