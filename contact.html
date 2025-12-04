@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="title" content="Welcome to Lunar Sparkle Jewelry" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Jewelry Co.</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Lunar Sparkle Jewelry</h1>
+      <nav class="pageLinks">
+        <ul>
+          <li class="navigation"><a href="index.html">Home</a></li>
+          <li class="navigation"><a href="about.html">About Us</a></li>
+          <li class="navigation"><a href="products.html">Products</a></li>
+          <li class="navigation"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contact-main">
+      <figure>
+        <img src="logo.png" alt="Lunar Sparkle Jewelry logo" />
+        <figcaption class="centered-figure">Our company logo</figcaption>
+      </figure>
+
+      <div class="contact-wrapper">
+        <form action="post">
+          <div class="user-name form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
+          </div>
+
+          <div class="password-input form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" id="pwd" name="pwd" />
+          </div>
+
+          <div class="first-name form-group">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" required />
+          </div>
+
+          <div class="last-name form-group">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname" />
+          </div>
+
+          <div class="email form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="purchase-input form-group">
+            <fieldset>
+              <legend>Did you purchase a product?</legend>
+              <div>
+                <input type="radio" id="yes" name="purchase" value="yes" />
+                <label for="yes">Yes</label>
+
+                <input type="radio" id="no" name="purchase" value="no" />
+                <label for="no">No</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="consent-input form-group">
+            <input
+              type="checkbox"
+              id="consent-checkbox"
+              name="consent"
+              required
+            />
+            <label for="consent-checkbox" class="req-checkbox"
+              >I agree that my personal data will be processed in accordance
+              with the privacy policy.</label
+            >
+          </div>
+
+          <div class="button-input form-group">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="social-media">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        <a href="#" class="fa fa-snapchat-ghost"></a>
+        <a href="#" class="fa fa-skype"></a>
+        <a href="#" class="fa fa-android"></a>
+        <a href="#" class="fa fa-dribbble"></a>
+        <a href="#" class="fa fa-vimeo"></a>
+        <a href="#" class="fa fa-tumblr"></a>
+        <a href="#" class="fa fa-vine"></a>
+        <a href="#" class="fa fa-foursquare"></a>
+        <a href="#" class="fa fa-stumbleupon"></a>
+        <a href="#" class="fa fa-flickr"></a>
+        <a href="#" class="fa fa-yahoo"></a>
+        <a href="#" class="fa fa-reddit"></a>
+        <a href="#" class="fa fa-rss"></a>
+      </div>
+    </main>
+    <footer>
+      <p class="footer-text">
+        &copy; <span id="footer-year"></span> Lunar Sparkle Jewelry
+      </p>
+    </footer>
+    <script src="main.js" async defer></script>
+  </body>
+</html>

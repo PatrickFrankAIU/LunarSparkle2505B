@@ -11,6 +11,9 @@
     --gradient: linear-gradient(to bottom, #F4F6F4, #f0f3f0);
     --white-smoke: #F4F6F4;
     --alabaster-gray: #f0f3f0;
+    --burnt-umber: #930000;
+    --sky-blue: #9ED0E5;
+    --shadow: #4e89a2;
 }
 
 
@@ -237,4 +240,79 @@ td {
 .social-media {
     text-align: center;
     padding-top: 2rem;
+}
+
+.contact-main {
+    background: var(--sky-blue);
+}
+
+input,
+button,
+legend,
+label {
+    font: inherit;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+input {
+    background: var(--dark-lavender);
+
+    border: var(--charcoal-blue);
+    border-radius: 15px;
+    padding: 1ex 2ex;
+}
+
+input:not([type="Checkbox"]) {
+    width: 100%;
+}
+
+form {
+    display: grid;
+    gap: 0.5rem;
+
+    @media (width > 720px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-wrapper {
+    border: 1px solid var(--dusk-blue);
+    border-radius: 10px;
+
+    background: var(--lavender);
+    padding: 1rem;
+    margin: 0 auto;
+    width: 80%;
+
+    filter: drop-shadow(1px 2px 8px var(--shadow));
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5em;
+}
+
+.form-group:has(.req-checkbox) {
+    grid-column: 1 / -1;
+    display: flex;
+}
+
+.req-checkbox {
+    text-transform: none;
+    font-size: small;
+}
+
+.button-input {
+    justify-self: start;
+}
+
+.button-input>button {
+    background: var(--burnt-umber);
+    color: var(--white-smoke);
+    padding: 0.5em;
+    border-radius: 10px;
 }
