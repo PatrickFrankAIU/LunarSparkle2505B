@@ -286,6 +286,7 @@ form {
     background: var(--lavender);
     padding: 1rem;
     margin: 0 auto;
+    margin-top: 1.5rem;
     width: 80%;
 
     filter: drop-shadow(1px 2px 8px var(--shadow));
