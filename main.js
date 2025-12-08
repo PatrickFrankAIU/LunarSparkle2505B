@@ -10,13 +10,23 @@ footerText.innerHTML = copyYear
 // })
 
 const main = () => {
-    setTimeout(showUp, 5000);
+    if (!sessionStorage.getItem('popupShown')) {
+        setTimeout(showUp, 3000);
+    }
 }
 
 function showUp() {
     sale.style.display = 'block'
+    sessionStorage.setItem('popupShown', 'true')
 }
 
+// close popup with X
 close.addEventListener('click', function closeButton() {
     sale.style.display = 'none'
+})
+
+sale.addEventListener('click', (e) => {
+    if (e.target === sale) {
+        sale.style.display = 'none'
+    }
 })

@@ -14,6 +14,61 @@
     --burnt-umber: #930000;
     --sky-blue: #9ED0E5;
     --shadow: #4e89a2;
+
+    /* updated colors below */
+    /* CSS HEX */
+    --ink-black: #001219ff;
+    --dark-teal: #005f73ff;
+    --dark-cyan: #0a9396ff;
+    --pearl-aqua: #94d2bdff;
+    --vanilla-custard: #e9d8a6ff;
+    --golden-orange: #ee9b00ff;
+    --burnt-caramel: #ca6702ff;
+    --rusty-spice: #bb3e03ff;
+    --oxidized-iron: #ae2012ff;
+    --brown-red: #9b2226ff;
+
+    /* CSS HSL */
+    /* CSS Neutral */
+    --prussian-blue: hsla(225, 59%, 11%, 1);
+    --space-indigo: hsla(224, 27%, 19%, 1);
+    --charcoal-blue: hsla(227, 16%, 28%, 1);
+    --charcoal: hsla(227, 9%, 37%, 1);
+    --dim-grey: hsla(231, 6%, 46%, 1);
+    --rosy-granite: hsla(240, 4%, 55%, 1);
+    --pale-slate: hsla(260, 3%, 64%, 0.8);
+    --silver: hsla(320, 2%, 73%, 1);
+    --dust-grey: hsla(0, 5%, 82%, 1);
+    --parchment: hsla(24, 22%, 91%, 1);
+
+    /* CSS HSL */
+    /* Dark Teal Gradient */
+    --dark-teal: hsla(190, 100%, 23%, 1);
+    --stormy-teal: hsla(190, 66%, 30%, 1);
+    --teal: hsla(190, 45%, 38%, 1);
+    --pacific-cyan: hsla(190, 32%, 45%, 1);
+    --pacific-blue: hsla(190, 25%, 53%, 1);
+    --cool-steel: hsla(188, 22%, 61%, 1);
+    --ash-grey: hsla(188, 20%, 68%, 1);
+    --ash-grey-2: hsla(183, 15%, 76%, 1);
+    --alabaster-grey: hsla(168, 6%, 84%, 1);
+    --parchment: hsla(24, 22%, 91%, .85);
+    --off-white: #FDFDFF;
+
+
+    /* CSS HSL */
+    --steel-blue: hsla(208, 48%, 47%, 1);
+    --dusty-denim: hsla(208, 43%, 53%, 1);
+    --blue-grey: hsla(207, 42%, 58%, 0.95);
+    --blue-grey-header: hsla(207 42% 58% / 0.8);
+    --sky-reflection: hsla(208, 43%, 65%, 1);
+    --powder-blue: hsla(209, 43%, 70%, 1);
+    --powder-blue-2: hsla(208, 43%, 76%, 1);
+    --pale-sky: hsla(209, 43%, 82%, 1);
+    --alice-blue: hsla(211, 44%, 88%, 1);
+    --alice-blue-2: hsla(210, 44%, 94%, 1);
+    --white: hsla(240, 100%, 100%, 1);
+
 }
 
 
@@ -27,7 +82,8 @@ body {
     font-family: sans-serif;
     font-family: var(--font-karla);
     background-repeat: no-repeat;
-    background: var(--gradient);
+    background-color: var(--off-white);
+    color: var(--ink-black);
     border-radius: 30px;
     margin: 0 auto;
     height: 100vh;
@@ -68,7 +124,7 @@ p {
     font-size: 16px;
     font-family: sans-serif;
     font-family: var(--font-karla);
-    color: var(--dusk-blue)
+    color: var(--ink-black)
 }
 
 img {
@@ -92,7 +148,7 @@ figcaption {
  } */
 
 header {
-    background-color: var(--lavender);
+    background-color: var(--blue-grey-header);
     padding: 20px;
     text-align: center;
     display: flex;
@@ -110,7 +166,7 @@ nav ul li {
 }
 
 footer {
-    background-color: var(--lavender);
+    background-color: var(--blue-grey-header);
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -146,7 +202,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: var(--charcoal-blue);
+    color: var(--ink-black);
 }
 
 .team {
@@ -165,18 +221,18 @@ a:visited {
 }
 
 .navigation:hover {
-    background-color: var(--dark-lavender);
+    background-color: var(--blue-grey-header);
     border-radius: 3px;
     padding: 5px;
 }
 
 .navigation>a:hover {
     color: var(--charcoal-blue);
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .pageLinks {
-    background-color: var(--lavender);
+    /* background-color: var(--blue-grey); */
     height: 100%;
     padding: 5px 0 5px 0;
     border-radius: 5px;
@@ -188,8 +244,8 @@ a:visited {
 
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-template-rows: repeat(auto, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(auto, 1fr); */
     grid-auto-rows: 500px;
 }
 
@@ -208,6 +264,19 @@ a:visited {
     align-items: center;
     padding: 0.5rem;
 }
+
+.about-card {
+    max-width: 500px;
+
+    display: grid;
+
+}
+
+/* .about-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */
 
 .table-container {
     overflow-x: auto;
@@ -242,9 +311,9 @@ td {
     padding-top: 2rem;
 }
 
-.contact-main {
+/* .contact-main {
     background: var(--sky-blue);
-}
+} */
 
 input,
 button,
@@ -259,14 +328,14 @@ label {
 }
 
 input {
-    background: var(--dark-lavender);
+    background: var(--dust-grey);
 
     border: var(--charcoal-blue);
     border-radius: 15px;
     padding: 1ex 2ex;
 }
 
-input:not([type="Checkbox"]) {
+input:not([type="Checkbox"]):not([type="radio"]) {
     width: 100%;
 }
 
@@ -283,7 +352,7 @@ form {
     border: 1px solid var(--dusk-blue);
     border-radius: 10px;
 
-    background: var(--lavender);
+    background: var(--sky-reflection);
     padding: 1rem;
     margin: 0 auto;
     margin-top: 1.5rem;
