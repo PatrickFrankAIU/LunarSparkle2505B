@@ -1,5 +1,6 @@
 const sale = document.getElementById('overlay')
 const close = document.getElementById('close-overlay')
+const bodyElement = document.body;
 const today = new Date();
 const copyYear = today.getFullYear()
 const footerText = document.getElementById('footer-year')
@@ -21,7 +22,7 @@ function showUp() {
 }
 
 // close popup with X
-close.addEventListener('click', function closeButton() {
+bodyElement.addEventListener('click', function closeButton() {
     sale.style.display = 'none'
 })
 
