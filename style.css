@@ -27,6 +27,24 @@
     --box-shadow: 3px 14px 32px -17px rgba(74, 74, 74, 0.42);
 }
 
+.dark-mode {
+    --bg-darker: hsl(187 25% 36%);
+    --bg-dark: hsl(185 26% 38%);
+    --bg: hsl(185 46% 44%);
+    --bg-light: hsl(185 100% 49%);
+    --text: hsl(187 100% 53%);
+    --text-muted: hsl(185 20% 76%);
+    --highlight: hsl(185 100% 47%);
+    --border: hsl(185 12% 98%);
+    --border-muted: hsl(185 14% 10%);
+    --primary: hsl(184 100% 60%);
+    --secondary: hsl(0 44% 82%);
+    --danger: hsl(9 21% 91%);
+    --warning: hsl(52 23% 84%);
+    --success: hsl(147 19% 86%);
+    --info: hsl(217 22% 91%);
+}
+
 /* General style set up */
 
 * {
