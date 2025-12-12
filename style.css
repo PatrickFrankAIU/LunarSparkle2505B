@@ -8,16 +8,16 @@
 
     /* Main HSL Colors */
     --bg-darker: hsl(187 25% 86%);
-    --bg-dark: hsl(185 26% 88%);
-    --bg: hsl(185 46% 94%);
-    --bg-light: hsl(185 100% 99%);
-    --text: hsl(187 100% 3%);
-    --text-muted: hsl(185 20% 26%);
-    --highlight: hsl(185 100% 97%);
-    --border: hsl(185 12% 48%);
-    --border-muted: hsl(185 14% 60%);
-    --primary: hsl(184 100% 10%);
-    --secondary: hsl(0 44% 32%);
+    --bg-dark: hsl(220 59% 91%);
+    --bg: hsl(220 100% 97%);
+    --bg-light: hsl(220 100% 100%);
+    --text: hsl(226 85% 7%);
+    --text-muted: hsl(220 26% 31%);
+    --highlight: hsl(220 100% 100%);
+    --border: hsl(220 19% 53%);
+    --border-muted: hsl(220 27% 65%);
+    --primary: hsl(221 49% 33%);
+    --secondary: hsl(44 100% 14%);
     --danger: hsl(9 21% 41%);
     --warning: hsl(52 23% 34%);
     --success: hsl(147 19% 36%);
@@ -29,20 +29,20 @@
 
 .dark-mode {
     --bg-darker: hsl(187 25% 36%);
-    --bg-dark: hsl(185 26% 38%);
-    --bg: hsl(185 46% 44%);
-    --bg-light: hsl(185 100% 49%);
-    --text: hsl(187 100% 53%);
-    --text-muted: hsl(185 20% 76%);
-    --highlight: hsl(185 100% 47%);
-    --border: hsl(185 12% 98%);
-    --border-muted: hsl(185 14% 10%);
-    --primary: hsl(184 100% 60%);
-    --secondary: hsl(0 44% 82%);
-    --danger: hsl(9 21% 91%);
-    --warning: hsl(52 23% 84%);
-    --success: hsl(147 19% 86%);
-    --info: hsl(217 22% 91%);
+    --bg-dark: hsl(228 79% 2%);
+    --bg: hsl(222 55% 5%);
+    --bg-light: hsl(220 35% 10%);
+    --text: hsl(220 100% 98%);
+    --text-muted: hsl(220 35% 73%);
+    --highlight: hsl(220 20% 42%);
+    --border: hsl(220 26% 31%);
+    --border-muted: hsl(220 37% 20%);
+    --primary: hsl(220 78% 76%);
+    --secondary: hsl(40 53% 60%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
 }
 
 /* General style set up */
