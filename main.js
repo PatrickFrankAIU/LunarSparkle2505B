@@ -11,11 +11,13 @@ let isLight = 'light'
 
 lightDarkButton.addEventListener('click', function setMode() {
     let lightMode = sessionStorage.getItem('isLight')
-    if (lightMode === 'light') {
-        setDarkMode();
-    } else {
-        setLightMode();
-    }
+    lightMode === 'light' ? setDarkMode() : setLightMode();
+
+    // if (lightMode === 'light') {
+    //     setDarkMode();
+    // } else {
+    //     setLightMode();
+    // }
 })
 
 
@@ -31,25 +33,17 @@ const main = () => {
 }
 
 function showUp() {
-    sale.style.display = 'block'
+    sale.classList.toggle('show'); 
     sessionStorage.setItem('popupShown', 'true')
 }
 
-// close popup with X
-bodyElement.addEventListener('click', function closeButton() {
-    try {
-        sale.style.display = 'none'
-    } catch (error) {
-        console.log(error);
-        
-    }
-})
+// close popup
+if (sale) {
+    sale.addEventListener('click', closeButton = () => { 
+        sale.classList.toggle('show');
+    })
+}
 
-// sale.addEventListener('click', (e) => {
-//     if (e.target === sale) {
-//         sale.style.display = 'none'
-//     }
-// })
 
 function setDarkMode() {
     // switching to dark mode
@@ -70,7 +64,7 @@ function setDarkMode() {
     document.documentElement.style.setProperty('--success', 'hsl(146 17% 59%)');
     document.documentElement.style.setProperty('--info', 'hsl(217 28% 65%)');
 
-    lightDarkButton.innerText = 'Set Light Mode'
+    lightDarkButton.innerHTML = '<span class="wi--solar-eclipse"></span>'
     isLight = 'dark'
 
     sessionStorage.setItem('isLight', 'dark')
@@ -98,7 +92,7 @@ function setLightMode() {
     document.documentElement.style.setProperty('--success', 'hsl(147 19% 36%)');
     document.documentElement.style.setProperty('--info', 'hsl(217 22% 41%)');
 
-    lightDarkButton.innerText = 'Set Dark Mode'
+    lightDarkButton.innerHTML = '<span class="wi--moon-alt-waning-gibbous-1"></span>'
     isLight = 'light'
 
     sessionStorage.setItem('isLight', 'light')
