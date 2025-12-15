@@ -7,17 +7,28 @@ const footerText = document.getElementById('footer-year')
 footerText.innerHTML = copyYear
 
 const lightDarkButton = document.getElementById('toggle-btn');
-let isLight = 'light'
+let isLight
+let lightMode = localStorage.getItem('isLight')
+
+console.log(`Light Mode is: ${lightMode}`);
+// console.log(`isLight: ${isLight}`);
+
 
 lightDarkButton.addEventListener('click', function setMode() {
-    let lightMode = sessionStorage.getItem('isLight')
-    lightMode === 'light' ? setDarkMode() : setLightMode();
+  
+  // lightMode === 'light' ? setDarkMode() : setLightMode();
 
-    // if (lightMode === 'light') {
-    //     setDarkMode();
-    // } else {
-    //     setLightMode();
-    // }
+  
+  // if (lightMode === 'light') {
+  if (lightMode === 'light' || lightMode !== null) {
+      setDarkMode();
+      // isLight = localStorage.getItem('isLight')
+      console.log(`Light Mode is: ${lightMode}`);
+  } else {
+      setLightMode();
+      // isLight = localStorage.getItem('isLight')
+      console.log(`Light Mode is: ${lightMode}`);
+  }
 })
 
 
@@ -65,11 +76,9 @@ function setDarkMode() {
     document.documentElement.style.setProperty('--info', 'hsl(217 28% 65%)');
 
     lightDarkButton.innerHTML = '<span class="wi--solar-eclipse"></span>'
-    isLight = 'dark'
-
-    sessionStorage.setItem('isLight', 'dark')
-    // isLight = sessionStorage.getItem('isLight')
-    // isLight = false;   
+    localStorage.setItem('isLight', 'dark')
+    // sessionStorage.setItem('isLight', 'dark')
+    // isLight = 'dark'  
 }
 
 function setLightMode() {
@@ -93,12 +102,11 @@ function setLightMode() {
     document.documentElement.style.setProperty('--info', 'hsl(217 22% 41%)');
 
     lightDarkButton.innerHTML = '<span class="wi--moon-alt-waning-gibbous-1"></span>'
-    isLight = 'light'
+    // isLight = 'light'
 
-    sessionStorage.setItem('isLight', 'light')
-    // isLight = sessionStorage.getItem('isLight')
-
-    // isLight = true;
+    localStorage.setItem('isLight', 'light')
+    // localStorage.removeItem('isLight')
+    // sessionStorage.setItem('isLight', 'light')
 }
 
 
@@ -119,3 +127,4 @@ function setLightMode() {
 //     --warning: hsl(52 23% 34%);
 //     --success: hsl(147 19% 36%);
 //     --info: hsl(217 22% 41%);
+
