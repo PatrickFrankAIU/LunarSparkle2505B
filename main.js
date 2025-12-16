@@ -10,25 +10,24 @@ const lightDarkButton = document.getElementById('toggle-btn');
 let isLight
 let lightMode = localStorage.getItem('isLight')
 
-console.log(`Light Mode is: ${lightMode}`);
-// console.log(`isLight: ${isLight}`);
+if (localStorage.getItem('isLight') === 'dark') {
+    setDarkMode()
+}
 
 
 lightDarkButton.addEventListener('click', function setMode() {
-  
+
   // lightMode === 'light' ? setDarkMode() : setLightMode();
 
-  
-  // if (lightMode === 'light') {
-  if (lightMode === 'light' || lightMode !== null) {
-      setDarkMode();
-      // isLight = localStorage.getItem('isLight')
-      console.log(`Light Mode is: ${lightMode}`);
-  } else {
-      setLightMode();
-      // isLight = localStorage.getItem('isLight')
-      console.log(`Light Mode is: ${lightMode}`);
-  }
+    if (localStorage.getItem('isLight') === 'light' || localStorage.getItem('isLight') === null) {
+        localStorage.setItem('isLight', 'dark') 
+        setDarkMode()
+        console.log(localStorage)
+    } else {
+        localStorage.setItem('isLight', 'light') 
+        setLightMode()
+        console.log(localStorage)
+    }
 })
 
 
@@ -76,9 +75,6 @@ function setDarkMode() {
     document.documentElement.style.setProperty('--info', 'hsl(217 28% 65%)');
 
     lightDarkButton.innerHTML = '<span class="wi--solar-eclipse"></span>'
-    localStorage.setItem('isLight', 'dark')
-    // sessionStorage.setItem('isLight', 'dark')
-    // isLight = 'dark'  
 }
 
 function setLightMode() {
@@ -102,11 +98,6 @@ function setLightMode() {
     document.documentElement.style.setProperty('--info', 'hsl(217 22% 41%)');
 
     lightDarkButton.innerHTML = '<span class="wi--moon-alt-waning-gibbous-1"></span>'
-    // isLight = 'light'
-
-    localStorage.setItem('isLight', 'light')
-    // localStorage.removeItem('isLight')
-    // sessionStorage.setItem('isLight', 'light')
 }
 
 
